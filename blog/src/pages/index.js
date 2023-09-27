@@ -46,7 +46,7 @@ export const query = graphql`
               layout: CONSTRAINED
               placeholder: BLURRED
               width:300
-            )
+            )S
           }
         }
       }
