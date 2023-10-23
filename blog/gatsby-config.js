@@ -27,10 +27,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-soure-contentful`,
+      resolve: `gatsby-source-contentful`, // Corrected plugin name
       options: {
         spaceId: `s83e9tgj213b`,
-        accessToken: `FuOGIbiFXFkVYa09fWzE7mYIO91TgcrFxofreO11Ums`
+        accessToken: `oNah8xqLkv38MTcWdpGyDHE9EjgJren9utNq12-Vwag`,
       }
     },
     `gatsby-transformer-sharp`,

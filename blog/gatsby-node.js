@@ -1,24 +1,27 @@
 const path = require(`path`);
 
+/**
+ * @type {import('gatsby').GatsbyNode['createPages']}
+ */
 exports.createPages = async ({graphql, actions}) => {
   const {createPage} = actions
-  return new Promise ((resolve, reject) => {
+  return new Promise((resolve, reject) =>{
     graphql(`
-    {
-      allContentfulTheGreatGatsbyBlog{
-        edges{
-          node {
-            id
-            slug
+      {
+        allContentfulBlogPost{
+          edges{
+            node{
+              id
+              slug
+            }
           }
         }
       }
-    }
-    `).then(result => {
+    `).then(result=> {
       if (result.errors) {
         reject(result.errors)
       }
-      result.data.allContentfulTheGreatGatsbyBlog.edges.forEach((edge) => {
+      result.data.allContentfulBlogPost.edges.forEach((edge) =>{
         createPage({
           path: edge.node.slug,
           component: require.resolve("./src/templates/blog-post.js"),
