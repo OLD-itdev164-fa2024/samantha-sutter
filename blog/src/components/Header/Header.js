@@ -13,17 +13,17 @@ const Outer = styled.header`
   justify-content: space-between;
 `
 
-
 const H1 = styled.h1`
-  margin:0px;
-  `
+  margin: 0px;
+`
 
 const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
-&:hover {
-  color: lightgray;
-}`
+  &:hover {
+    color: lightgray;
+  }
+`
 
 const Header = ({ siteTitle }) => (
   <Outer>
@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => (
   </Outer>
 )
 
-Header.propTypes = {
+Header.propTypes ={
   siteTitle: PropTypes.string,
 }
 
@@ -43,4 +43,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export { Header }
